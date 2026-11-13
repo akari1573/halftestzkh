@@ -8,11 +8,9 @@ plugins {
 android {
     // 代码包名（R 类所在包）
     namespace = "com.example.zkhhalftest"
-    // 编译所用 SDK 版本（36，使用已安装的 android-36.1 平台）
+    // 编译所用 SDK 版本（37，最新稳定平台）
     compileSdk {
-        version = release(36) {
-            minorApiLevel = 1
-        }
+        version = release(37)
     }
 
     defaultConfig {
@@ -21,7 +19,7 @@ android {
         // 最低支持的 Android 版本（7.0）
         minSdk = 24
         // 目标 SDK 版本
-        targetSdk = 36
+        targetSdk = 37
         versionCode = 1
         versionName = "1.0"
 
