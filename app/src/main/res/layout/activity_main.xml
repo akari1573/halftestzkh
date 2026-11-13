@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    第1个Activity（主界面）的布局。
+    结构：ScrollView（可滚动，保证横屏/小屏时内容不被裁剪）
+          └─ LinearLayout（竖向排列）
+              ├─ 第一个数输入框
+              ├─ 第二个数输入框
+              ├─ 运算符单选按钮组（+ - × ÷）
+              ├─ 计算按钮
+              └─ 结果文本
+-->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- 标签：第一个数 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_first_number"
+            android:textSize="16sp" />
+
+        <!-- 第一个数输入框：数字键盘，可输入小数和负号 -->
+        <EditText
+            android:id="@+id/etFirstNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_first_number"
+            android:importantForAutofill="no"
+            android:inputType="numberDecimal|numberSigned"
+            android:maxLines="1" />
+
+        <!-- 标签：第二个数 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/label_second_number"
+            android:textSize="16sp" />
+
+        <!-- 第二个数输入框 -->
+        <EditText
+            android:id="@+id/etSecondNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_second_number"
+            android:importantForAutofill="no"
+            android:inputType="numberDecimal|numberSigned"
+            android:maxLines="1" />
+
+        <!-- 标签：选择运算 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/label_operator"
+            android:textSize="16sp" />
+
+        <!-- 运算符单选按钮组：四个按钮横向排列，同一组内只能选中一个 -->
+        <RadioGroup
+            android:id="@+id/rgOperator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:orientation="horizontal">
+
+            <!-- 加法 + -->
+            <RadioButton
+                android:id="@+id/rbAdd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/operator_add" />
+
+            <!-- 减法 - -->
+            <RadioButton
+                android:id="@+id/rbSubtract"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/operator_subtract" />
+
+            <!-- 乘法 × -->
+            <RadioButton
+                android:id="@+id/rbMultiply"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/operator_multiply" />
+
+            <!-- 除法 ÷ -->
+            <RadioButton
+                android:id="@+id/rbDivide"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/operator_divide" />
+        </RadioGroup>
+
+        <!-- 计算按钮：点击后在代码中执行运算 -->
+        <Button
+            android:id="@+id/btnCalculate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/btn_calculate" />
+
+        <!-- 结果文本：居中加粗显示计算结果 -->
+        <TextView
+            android:id="@+id/tvResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:gravity="center"
+            android:text="@string/result_empty"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+</ScrollView>

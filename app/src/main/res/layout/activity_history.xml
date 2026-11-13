@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    第2个Activity（历史记录页面）的布局。
+    只有一个占满全屏的 RecyclerView，列表项的内容由 item_history.xml 定义。
+-->
+<androidx.recyclerview.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rvHistory"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="true"
+    android:padding="8dp" />

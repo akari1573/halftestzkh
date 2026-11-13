@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    历史记录列表的单个列表项布局。
+    竖向排列两个 TextView：
+    1. tvExpression：表达式（加粗、16sp）
+    2. tvTime：计算时间（棕色、12sp，跟随主题的次要文字颜色）
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="12dp">
+
+    <!-- 表达式，例如 "12 + 34 = 46" -->
+    <TextView
+        android:id="@+id/tvExpression"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <!-- 计算时间，例如 "2026-11-13 10:30:00" -->
+    <TextView
+        android:id="@+id/tvTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:textColor="?android:textColorSecondary"
+        android:textSize="12sp" />
+</LinearLayout>

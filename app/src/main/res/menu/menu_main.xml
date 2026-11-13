@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    第1个Activity标题栏上的选项菜单。
+    "历史"菜单项：点击后跳转到第2个Activity（历史记录页面）。
+    showAsAction="ifRoom" 表示标题栏空间足够时直接显示，否则收进溢出菜单。
+-->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/action_history"
+        android:showAsAction="ifRoom"
+        android:title="@string/menu_history" />
+</menu>

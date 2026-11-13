@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+    应用清单：向系统声明应用的组件和配置。
+-->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <!-- application 节点：全局配置 -->
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -11,18 +15,28 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Zkhhalftest">
+
+        <!-- 第1个Activity：计算器主界面（应用入口） -->
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:label="@string/app_name"
+            android:label="@string/main_title"
             android:theme="@style/Theme.Zkhhalftest"
             android:windowSoftInputMode="adjustResize">
+            <!-- 声明它是桌面图标点击后启动的入口 Activity -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- 第2个Activity：历史记录页面（只供本应用内部跳转） -->
+        <activity
+            android:name=".HistoryActivity"
+            android:exported="false"
+            android:label="@string/history_title"
+            android:parentActivityName=".MainActivity" />
     </application>
 
 </manifest>

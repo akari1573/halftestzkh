@@ -1,3 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    字符串资源：应用所有界面文字集中定义在这里，
+    代码和布局中通过 @string/xxx 或 R.string.xxx 引用，避免硬编码。
+-->
 <resources>
+    <!-- 应用名称 -->
     <string name="app_name">zkhhalftest</string>
+    <!-- 第1个Activity标题：姓名+学号 -->
+    <string name="main_title">张可航2024110146</string>
+    <!-- 第2个Activity标题 -->
+    <string name="history_title">历史记录</string>
+
+    <!-- 主界面标签 -->
+    <string name="label_first_number">第一个数：</string>
+    <string name="label_second_number">第二个数：</string>
+    <string name="label_operator">选择运算：</string>
+    <!-- 输入框占位提示 -->
+    <string name="hint_first_number">请输入第一个数</string>
+    <string name="hint_second_number">请输入第二个数</string>
+
+    <!-- 四种运算符符号 -->
+    <string name="operator_add">+</string>
+    <string name="operator_subtract">-</string>
+    <string name="operator_multiply">×</string>
+    <string name="operator_divide">÷</string>
+
+    <!-- 计算按钮文字 -->
+    <string name="btn_calculate">计算</string>
+    <!-- 标题栏"历史"菜单文字 -->
+    <string name="menu_history">历史</string>
+    <!-- 尚未计算时结果区域显示的提示 -->
+    <string name="result_empty">请输入数字并选择运算</string>
+    <!-- 结果格式模板：%1$s 第1个数，%2$s 运算符，%3$s 第2个数，%4$s 结果 -->
+    <string name="result_format">%1$s %2$s %3$s = %4$s</string>
+
+    <!-- 各类错误提示 -->
+    <string name="error_invalid_input">请输入两个有效的数字</string>
+    <string name="error_no_operator">请选择运算方式</string>
+    <string name="error_divide_by_zero">除数不能为0</string>
 </resources>

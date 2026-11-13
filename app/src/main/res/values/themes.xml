@@ -1,5 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+    应用主题：
+    1. 继承 android:Theme.Material.Light —— 自带标题栏（ActionBar），
+       才能显示 Activity 的标题和"历史"菜单；
+    2. 覆盖文字颜色为棕色（#795548），使全应用的字体统一显示为棕色：
+       - textColorPrimary：普通文字（标签、输入内容、结果、标题栏）
+       - textColorSecondary：次要文字（历史记录中的时间）
+       - textColorTertiary：更次要的文字
+       - textColorPrimaryInverse：反色背景上的文字（如按钮文字）
+       - textColorHint：输入框占位提示，用浅棕色 #A1887F 区分
+-->
 <resources>
 
-    <style name="Theme.Zkhhalftest" parent="android:Theme.Material.Light.NoActionBar" />
+    <style name="Theme.Zkhhalftest" parent="android:Theme.Material.Light">
+        <item name="android:textColorPrimary">#795548</item>
+        <item name="android:textColorSecondary">#795548</item>
+        <item name="android:textColorTertiary">#795548</item>
+        <item name="android:textColorPrimaryInverse">#795548</item>
+        <item name="android:textColorHint">#A1887F</item>
+    </style>
 </resources>
